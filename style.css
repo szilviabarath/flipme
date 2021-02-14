@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  align-content: center;
+}
+
+div {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  margin: 20px;
+  width: 500px;
+  height: 500px;
+  perspective: 1000px;
+}
+
+.card {
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.front, .back {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+}
+
+.front {
+  border: 2px solid black;
+  background: lightgreen;
+}
+
+.front:hover {
+  bottom: 2px;
+  left: 2px;
+  box-shadow: 0px 0px 20px 1px #000;
+}
+
+.back {
+  border: 2px solid rgb(0, 0, 0);
+  background: rgb(105, 163, 94);
+  transform: rotateY(180deg);
+}
+
+.back:hover {
+  bottom: 2px;
+  right: 2px;
+  box-shadow: 0px 0px 20px 1px #000;
+}
+input {
+    margin: .4rem;
+}
